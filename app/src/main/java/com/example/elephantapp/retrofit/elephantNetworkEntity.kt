@@ -4,7 +4,7 @@ import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
 class elephantNetworkEntity(
-    @SerializedName("id")
+    @SerializedName("_id")
     @Expose
     var id: String,
 
@@ -12,23 +12,23 @@ class elephantNetworkEntity(
     @Expose
     var index: Int,
 
-    @SerializedName("nombre")
+    @SerializedName("name")
     @Expose
     var nombre: String,
 
-    @SerializedName("afiliacion")
+    @SerializedName("affiliation")
     @Expose
     var afiliacion: String,
 
-    @SerializedName("especie")
+    @SerializedName("species")
     @Expose
     var especie: String,
 
-    @SerializedName("sexo")
+    @SerializedName("sex")
     @Expose
     var sexo: String,
 
-    @SerializedName("ficticio")
+    @SerializedName("fictional")
     @Expose
     var ficticio: String,
 
@@ -40,23 +40,16 @@ class elephantNetworkEntity(
     @Expose
     var dod: String,
 
-    @SerializedName("wiki")
+    @SerializedName("wikilink")
     @Expose
     var wiki: String,
 
-    @SerializedName("url")
+    @SerializedName("image")
     @Expose
     var url: String,
 
-    @SerializedName("nota")
+    @SerializedName("note")
     @Expose
-    var nota: String,
+    var nota: String
 
-    @SerializedName("width")
-    @Expose
-    var width: Int,
-
-    @SerializedName("height")
-    @Expose
-    var height: Int
 )

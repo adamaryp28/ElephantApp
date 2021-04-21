@@ -12,7 +12,5 @@ data class elephant(
     var dod: String,
     var wiki: String,
     var url: String,
-    var nota:String,
-    var width: Int,
-    var height: Int
+    var nota:String
 )

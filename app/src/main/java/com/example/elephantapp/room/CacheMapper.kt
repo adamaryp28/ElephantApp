@@ -15,15 +15,13 @@ class CacheMapper
                 nombre = entity.nombre,
                 afiliacion = entity.afiliacion,
                 especie = entity.especie,
-                sexo = entity.especie,
+                sexo = entity.sexo,
                 ficticio = entity.ficticio,
                 dob = entity.dob,
                 dod = entity.dod,
                 wiki = entity.wiki,
                 url = entity.url,
-                nota = entity.nota,
-                height = entity.height,
-                width = entity.width
+                nota = entity.nota
             )
         }
 
@@ -40,9 +38,7 @@ class CacheMapper
                 dod = domainModel.dod,
                 wiki = domainModel.wiki,
                 url = domainModel.url,
-                nota = domainModel.nota,
-                height = domainModel.height,
-                width = domainModel.width
+                nota = domainModel.nota
             )
         }
 

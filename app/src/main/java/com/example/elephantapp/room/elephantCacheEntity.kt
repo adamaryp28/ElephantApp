@@ -30,9 +30,5 @@ class elephantCacheEntity (
     @ColumnInfo(name = "url")
     var url: String,
     @ColumnInfo(name = "nota")
-    var nota: String,
-    @ColumnInfo(name = "width")
-    var width: Int,
-    @ColumnInfo(name = "height")
-    var height: Int
+    var nota: String
 )

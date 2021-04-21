@@ -1,0 +1,106 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "8ec58f7dfab71579f226714bad962383",
+    "entities": [
+      {
+        "tableName": "elefante",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `url` TEXT NOT NULL, `width` INTEGER NOT NULL, `height` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "index",
+            "columnName": "index",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nombre",
+            "columnName": "nombre",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "afiliacion",
+            "columnName": "afiliacion",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "especie",
+            "columnName": "especie",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sexo",
+            "columnName": "sexo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "afiliacion",
+            "columnName": "afiliacion",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ficticio",
+            "columnName": "ficticio",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dob",
+            "columnName": "dob",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dod",
+            "columnName": "dod",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wiki",
+            "columnName": "wiki",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "url",
+            "columnName": "url",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nota",
+            "columnName": "nota",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '8ec58f7dfab71579f226714bad962383')"
+    ]
+  }
+}
