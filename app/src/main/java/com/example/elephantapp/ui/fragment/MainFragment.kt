@@ -32,7 +32,7 @@ constructor() : Fragment(R.layout.fragment_main) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        subscribeObservers()
+        datas()
 //        viewModel.setStateEvent()
         val layoutManager =
             LinearLayoutManager(
@@ -42,24 +42,24 @@ constructor() : Fragment(R.layout.fragment_main) {
             )
         layoutManager.reverseLayout = true
         layoutManager.stackFromEnd = true
-        recyclerViewCats.layoutManager = layoutManager
-        recyclerViewCats.adapter = elephantsAdapter
+        recyclerViewElephants.layoutManager = layoutManager
+        recyclerViewElephants.adapter = elephantsAdapter
 
-        subscribeObservers()
+        datas()
         lifecycleScope.launch {
             viewModel.userIntent.send(intent.GetElephantsEvent)
 
         }
     }
 
-    private fun subscribeObservers() {
+    private fun datas() {
         lifecycleScope.launch {
             viewModel.dataState.collect {
                 when (it) {
                     is DataState.Success -> {
                         displayProgressBar(false)
 //                    appendCatID(dataState.data)
-                        elephantsAdapter.setCats(it.elephants)
+                        elephantsAdapter.setElephants(it.elephants)
                     }
                     is DataState.Error -> {
                         displayProgressBar(false)
@@ -77,7 +77,7 @@ constructor() : Fragment(R.layout.fragment_main) {
         //  if (message != null) text.text = message else text.text = "Unknown error."
     }
 
-
+    //aqui hay error, porque sale nulo
     private fun displayProgressBar(isDisplayed: Boolean) {
         progress_bar.visibility = if (isDisplayed) View.VISIBLE else View.GONE
     }

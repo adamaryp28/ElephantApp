@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.item_elephant.view.*
 class AdapterElephants() : RecyclerView.Adapter<AdapterElephants.ViewHolder>(){
 
     lateinit var items: ArrayList<elephant>
-
+    //NULL ESTO ;(
     override fun getItemCount(): Int {
         return if(::items.isInitialized){
             items.size
@@ -23,7 +23,7 @@ class AdapterElephants() : RecyclerView.Adapter<AdapterElephants.ViewHolder>(){
         }
 
     }
-    fun setCats(items: List<elephant>) {
+    fun setElephants(items: List<elephant>) {
         this.items = items as ArrayList<elephant>
         notifyDataSetChanged()
     }

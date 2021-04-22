@@ -41,7 +41,7 @@ class NetworkMapper
                 nota = domainModel.nota
             )
         }
-
+        //error aqui tabien null
         fun mapFromEntityList(entities: List<elephantNetworkEntity>): List<elephant>{
             return entities.map { mapFromEntity(it)}
         }

@@ -32,7 +32,7 @@ object RetrofitModule {
 
     @Singleton
     @Provides
-    fun provideCatService(retrofit: Retrofit.Builder): elephantRetrofit{
+    fun provideElephantService(retrofit: Retrofit.Builder): elephantRetrofit{
         return retrofit.build().create(elephantRetrofit::class.java)
     }
 }

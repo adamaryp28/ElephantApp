@@ -16,14 +16,14 @@ import javax.inject.Singleton
 object RoomModule {
     @Singleton
     @Provides
-    fun provideCatDb(@ApplicationContext context: Context): elephantDatabase {
+    fun provideElDb(@ApplicationContext context: Context): elephantDatabase {
         return Room
             .databaseBuilder(context, elephantDatabase::class.java, elephantDatabase.DATABASE_NAME).fallbackToDestructiveMigration().build()
     }
 
     @Singleton
     @Provides
-    fun provideCatDao(elephantDatabase: elephantDatabase): elephantDao {
-        return elephantDatabase.catDao()
+    fun provideElephantDao(elephantDatabase: elephantDatabase): elephantDao {
+        return elephantDatabase.elephantDao()
     }
 }
